@@ -7,6 +7,7 @@
       class="ma-2"
       color="info"
       :small="!large"
+      :href="item.link"
     >
       <v-icon dark v-text="item.icon" />
     </v-btn>
@@ -25,20 +26,18 @@ export default {
   data: () => ({
     items: [
       {
-        name: 'Twitter',
-        icon: 'mdi-twitter',
-      },
-      {
-        name: 'Instagram',
-        icon: 'mdi-instagram',
-      },
-      {
-        name: 'Facebook',
-        icon: 'mdi-facebook',
+        name: 'Linkedin',
+        icon: 'mdi-linkedin',
+        link: 'https://www.linkedin.com/in/narges-pourmoghadasi/',
       },
       {
         name: 'Email',
         icon: 'mdi-email',
+      },
+      {
+        name: 'StackOverflow',
+        icon: 'mdi-stack-overflow',
+        link: 'https://stackoverflow.com/users/6514438/narges-pms',
       },
       {
         name: 'Phone',

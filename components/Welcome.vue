@@ -18,7 +18,6 @@
               motivated, expert, and friendly people. Wildly enthusiastic about
               having the opportunity for advancement and learning more.
             </BaseText>
-            <BaseBtn class="mt-4"> Learn More! </BaseBtn>
           </v-col>
         </v-row>
 

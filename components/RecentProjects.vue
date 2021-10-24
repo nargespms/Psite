@@ -13,7 +13,7 @@
         </BaseText>
 
         <v-card color="secondary">
-          <v-container class="pa-2">
+          <v-container class="pa-5">
             <v-row>
               <v-col
                 v-for="project in projects"
@@ -23,7 +23,7 @@
               >
                 <a href="#">
                   <v-img
-                    :src="require(`@/assets/${project}.jpeg`)"
+                    :src="require(`@/assets/${project}`)"
                     max-height="300"
                   />
                 </a>
@@ -45,7 +45,13 @@ export default {
   name: 'RecentProjects',
 
   data: () => ({
-    projects: ['project1', 'project2', 'project3', 'project4'],
+    projects: [
+      'cosmetic.jpg',
+      'project2.jpeg',
+      'crm.png',
+      'bookExchange.jpg',
+      'sita.png',
+    ],
   }),
 }
 </script>
