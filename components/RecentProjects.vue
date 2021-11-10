@@ -4,7 +4,7 @@
       <v-col class="primary text-center pa-5 white--text" cols="12" md="6">
         <BaseBubble1 style="transform: rotate(180deg) translateX(25%)" />
 
-        <BaseHeading> Recent Projects </BaseHeading>
+        <BaseHeading> My portfolio </BaseHeading>
 
         <BaseText class="mb-5">
           Lorem ipsum dolor sit amet, consectetur adipi<br />
@@ -34,7 +34,7 @@
       </v-col>
 
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img :src="require('@/assets/recentprojects.png')" height="100%" />
+        <v-img :src="require('@/assets/services.png')" height="100%" />
       </v-col>
     </v-row>
   </section>

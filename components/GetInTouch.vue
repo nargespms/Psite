@@ -1,10 +1,6 @@
 <template>
   <section id="get-in-touch" class="overflow-hidden">
     <v-row class="info white--text" no-gutters>
-      <v-col class="hidden-sm-and-down" md="6">
-        <v-img :src="require('@/assets/contact.png')" height="100%" />
-      </v-col>
-
       <v-col class="pa-5" cols="12" md="6">
         <BaseBubble1 />
 
@@ -21,6 +17,10 @@
 
           <BaseBtn>Send</BaseBtn>
         </v-sheet>
+      </v-col>
+
+      <v-col class="hidden-sm-and-down" md="6">
+        <v-img :src="require('@/assets/aboutme.png')" height="100%" />
       </v-col>
     </v-row>
   </section>

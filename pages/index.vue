@@ -4,9 +4,9 @@
 
     <RecentProjects />
 
-    <Services />
+    <!-- <Services /> -->
 
-    <AboutMe />
+    <Technologies />
 
     <GetInTouch />
   </div>
