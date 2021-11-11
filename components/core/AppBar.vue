@@ -6,13 +6,19 @@
     flat
   >
     <v-slide-x-transition>
-      <v-img
+      <!-- <v-img
         v-if="showLogo"
         :src="require('@/assets/logo.png')"
         class="shrink"
         contain
         height="50"
-      />
+      /> -->
+      <span
+        class="pacifico-font"
+        :class="showLogo ? 'secondary--text fn-25' : ''"
+      >
+        Narges Pourmoghadasi
+      </span>
     </v-slide-x-transition>
 
     <v-spacer />
@@ -39,3 +45,12 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.pacifico-font {
+  font-family: 'Pacifico', cursive;
+}
+.fn-25 {
+  font-size: 25px;
+}
+</style>
