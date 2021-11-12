@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" class="display-1 v-heading mb-3 font-weight-light">
+  <component :is="tag" class="subHeader-font">
     <slot />
   </component>
 </template>
@@ -16,3 +16,10 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.subHeader-font {
+  font-family: 'Domine', serif;
+  font-size: 20px;
+}
+</style>

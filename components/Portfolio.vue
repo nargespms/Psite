@@ -14,12 +14,14 @@
 
     <v-card>
       <v-container class="pa-5">
-        <v-row>
-          <v-col v-for="project in projects" :key="project" cols="12" md="6">
-            <a href="#">
-              <v-img :src="require(`@/assets/${project}`)" max-height="300" />
-            </a>
-          </v-col>
+        <v-row v-for="project in projects" :key="project.name">
+          <Project
+            :name="project.name"
+            :images="project.images"
+            :description="project.description"
+            :technologies="project.technologies"
+            :roles="project.roles"
+          />
         </v-row>
       </v-container>
     </v-card>
@@ -30,14 +32,42 @@
 export default {
   name: 'Portfolio',
 
-  data: () => ({
-    projects: [
-      'cosmetic.jpg',
-      'project2.jpeg',
-      'crm.png',
-      'bookExchange.jpg',
-      'sita.png',
-    ],
-  }),
+  // data: () => ({
+  //   projects: [
+  //     'cosmetic.jpg',
+  //     'project2.jpeg',
+  //     'crm.png',
+  //     'bookExchange.jpg',
+  //     'sita.png',
+  //   ],
+  // }),
+
+  data() {
+    return {
+      projects: [
+        {
+          name: 'Cosmetic shop',
+          description: `This website belongs to an online cosmetic shop that has a products page, product page, cosmetic-related weblogs, etc., like any other online shop.
+            `,
+          technologies: [
+            {
+              name: 'Javascript',
+              icon: 'mdi-language-javascript',
+              color: 'yellow',
+            },
+            { name: 'Nuxt', icon: 'mdi-nuxt', color: 'teal accent-3' },
+            { name: 'Vuejs', icon: 'mdi-vuejs', color: 'teal darken-1' },
+            { name: 'Vuex' },
+          ],
+          roles: ['Frontend developer'],
+          images: [
+            { name: 'cosmetic2.jpg' },
+            { name: 'cosmetic4.jpg' },
+            { name: 'cosmetic5.jpg' },
+          ],
+        },
+      ],
+    }
+  },
 }
 </script>

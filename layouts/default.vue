@@ -13,3 +13,10 @@ export default {
   name: 'App',
 }
 </script>
+
+.
+<style lang="scss">
+.v-application {
+  font-family: 'Raleway', sans-serif !important;
+}
+</style>
