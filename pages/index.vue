@@ -2,7 +2,7 @@
   <div>
     <Welcome />
 
-    <RecentProjects />
+    <Portfolio />
 
     <!-- <Services /> -->
 

@@ -2,21 +2,12 @@
   <v-app-bar
     v-scroll="onScroll"
     :color="!isScrolling ? 'transparent' : 'white'"
+    height="80"
     fixed
     flat
   >
     <v-slide-x-transition>
-      <!-- <v-img
-        v-if="showLogo"
-        :src="require('@/assets/logo.png')"
-        class="shrink"
-        contain
-        height="50"
-      /> -->
-      <span
-        class="pacifico-font"
-        :class="showLogo ? 'secondary--text fn-25' : ''"
-      >
+      <span v-if="showLogo" class="pacifico-font contrastColor--text fn-30">
         Narges Pourmoghadasi
       </span>
     </v-slide-x-transition>
@@ -50,7 +41,7 @@ export default {
 .pacifico-font {
   font-family: 'Pacifico', cursive;
 }
-.fn-25 {
-  font-size: 25px;
+.fn-30 {
+  font-size: 30px;
 }
 </style>

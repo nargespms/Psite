@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" class="display-3 v-heading mb-3 font-weight-light">
+  <component :is="tag" class="mb-3 Header-font">
     <slot />
   </component>
 </template>
@@ -17,7 +17,12 @@ export default {
 }
 </script>
 
-<style lang="sass">
-.v-heading
-  letter-spacing: 3px !important
+<style lang="scss">
+.v-heading {
+  letter-spacing: 3px !important;
+}
+.Header-font {
+  font-family: 'Domine', serif;
+  font-size: 44px;
+}
 </style>

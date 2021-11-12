@@ -26,6 +26,14 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Pacifico&display=swap',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Domine:wght@500&family=Pacifico&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap',
+      },
     ],
   },
 
@@ -60,6 +68,7 @@ export default {
           secondary: '#bfada5',
           accent: '#d8ebf1',
           info: '#5b5c79',
+          contrastColor: '#272727',
         },
         light: {
           primary: '#d3c3bc',

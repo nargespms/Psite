@@ -8,6 +8,7 @@
       color="info"
       :small="!large"
       :href="item.link"
+      target="_blank"
     >
       <v-icon dark v-text="item.icon" />
     </v-btn>
