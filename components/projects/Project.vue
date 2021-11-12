@@ -1,6 +1,11 @@
 <template>
-  <v-row no-gutters justify="space-between" class="my-4 py-5">
-    <v-col cols="12" md="5">
+  <v-row
+    no-gutters
+    justify="space-between"
+    class="my-4 py-5"
+    :class="!revertDir ? 'rtl' : ''"
+  >
+    <v-col cols="12" md="5" class="ltr">
       <BaseHeading>
         {{ name }}
       </BaseHeading>
@@ -19,13 +24,13 @@
 
       <p>
         <BaseSubheading> Roles: </BaseSubheading>
-        <BaseText v-for="(role, index) in roles" :key="index" class="mb-5">
+        <span v-for="(role, index) in roles" :key="index" class="mb-1 d-block">
           {{ role }}
-        </BaseText>
+        </span>
       </p>
     </v-col>
 
-    <v-col cols="12" md="6" class="pr-md-5">
+    <v-col cols="12" md="6">
       <v-carousel hide-delimiters>
         <v-carousel-item v-for="(image, i) in images" :key="i">
           <v-img
@@ -53,9 +58,9 @@ export default {
       type: String,
       default: '',
     },
-    dir: {
-      type: String,
-      default: 'left',
+    projectIndex: {
+      type: Number,
+      default: 0,
     },
     gallery: {
       type: Boolean,
@@ -92,5 +97,20 @@ export default {
       model: 0,
     }
   },
+
+  computed: {
+    revertDir() {
+      return Boolean(this.projectIndex % 2)
+    },
+  },
 }
 </script>
+
+<style lang="scss">
+.rtl {
+  direction: rtl;
+}
+.ltr {
+  direction: ltr;
+}
+</style>
