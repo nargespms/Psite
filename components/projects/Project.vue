@@ -5,7 +5,7 @@
     class="my-4 py-5"
     :class="!revertDir ? 'rtl' : ''"
   >
-    <v-col cols="12" md="5" class="ltr">
+    <v-col cols="12" md="5" class="ltr mt-9">
       <BaseHeading>
         {{ name }}
       </BaseHeading>
@@ -14,16 +14,39 @@
         {{ description }}
       </BaseText>
 
-      <p>
+      <p class="mb-5">
         <BaseSubheading> Technologies used in the website are:</BaseSubheading>
-        <span v-for="(tech, index) in technologies" :key="index" class="pr-3">
-          <v-icon :color="tech.color">{{ tech.icon }}</v-icon>
+        <span v-for="(tech, index) in uiTechnologies" :key="index" class="pr-3">
+          <v-icon v-if="tech.icon" :color="tech.color">{{ tech.icon }}</v-icon>
+          <img
+            v-if="!tech.icon"
+            class="d-inline-flex"
+            :src="tech.imgUrl"
+            width="20"
+            :style="'margin-bottom:-2px'"
+          />
+          {{ tech.name }}
+        </span>
+        <v-divider class="my-2" />
+        <span
+          v-for="(tech, index) in apiTechnologies"
+          :key="index"
+          class="pr-3"
+        >
+          <v-icon v-if="tech.icon" :color="tech.color">{{ tech.icon }}</v-icon>
+          <img
+            v-if="!tech.icon"
+            class="d-inline-flex"
+            :src="tech.imgUrl"
+            width="20"
+            :style="'margin-bottom:-2px'"
+          />
           {{ tech.name }}
         </span>
       </p>
 
       <p>
-        <BaseSubheading> Roles: </BaseSubheading>
+        <BaseSubheading> My roles in this Project: </BaseSubheading>
         <span v-for="(role, index) in roles" :key="index" class="mb-1 d-block">
           {{ role }}
         </span>
@@ -34,13 +57,8 @@
       <v-carousel hide-delimiters>
         <v-carousel-item v-for="(image, i) in images" :key="i">
           <v-img
-            :src="require(`@/assets/${image.name}`)"
-            :width="
-              $vuetify.breakpoint.lgAndUp
-                ? '600'
-                : $vuetify.breakpoint.xs
-                ? '280'
-                : '400'
+            :src="
+              require(`@/assets/projects/${image.folderName}/${image.name}`)
             "
           ></v-img>
         </v-carousel-item>
@@ -82,7 +100,11 @@ export default {
       type: String,
       default: '',
     },
-    technologies: {
+    uiTechnologies: {
+      type: Array,
+      default: () => {},
+    },
+    apiTechnologies: {
       type: Array,
       default: () => {},
     },

@@ -5,21 +5,18 @@
         <BaseBubble1 style="transform: rotate(180deg) translateY(25%)" />
 
         <v-row align="center" justify="center">
-          <v-avatar
-            :src="require('@/assets/welcome.png')"
-            color="secondary"
-            size="200"
-            class="mr-5"
-          ></v-avatar>
+          <v-avatar size="200" color="secondary" class="mr-5">
+            <img src="../assets/avatar.png" alt="Narges pourmoghadasi" />
+          </v-avatar>
           <v-col cols="10" md="6">
             <BaseHeading>Welcome!</BaseHeading>
             <BaseText>
-              Hi! My name is Narges Pourmoghadasi. I have 5+ years of experience
-              in Front-end and JavaScript programming with extensive knowledge
-              of Vue.js web apps development. Eager to learn new technologies
-              and be a proactive member of a team of motivated, expert, and
-              friendly people. Wildly enthusiastic about having the opportunity
-              for advancement and learning more.
+              Hi! My name is Narges Pourmoghadasi. I have years of experience in
+              Front-end and JavaScript programming with extensive knowledge of
+              Vue.js web apps development. Eager to learn new technologies and
+              be a proactive member of a team of motivated, expert, and friendly
+              people. Wildly enthusiastic about having the opportunity for
+              advancement and learning more.
             </BaseText>
           </v-col>
         </v-row>

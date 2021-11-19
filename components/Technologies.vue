@@ -5,11 +5,11 @@
         <v-img :src="require('@/assets/services.png')" height="100%" />
       </v-col>
 
-      <v-col class="pa-5" cols="12" md="6">
+      <v-col class="pa-5 secondary" cols="12" md="6">
         <BaseBubble1 style="transform: translate(5%, -5%)" />
 
         <v-row no-gutters class="mb-8" justify="center">
-          <BaseHeading class="info--text text-center"> My skills </BaseHeading>
+          <BaseHeading class="text-center"> My skills </BaseHeading>
         </v-row>
 
         <v-row class="mt-8" no-gutters justify="center">
